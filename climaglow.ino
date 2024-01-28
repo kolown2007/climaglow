@@ -8,8 +8,8 @@
 const char* ssid = "";
 const char* password = "";
 
-// dont share the API key
-String openWeatherMapApiKey = "d703826ebc06e58937f0e3813a800cc8";
+// will chat the API key
+String openWeatherMapApiKey = "";
 
 // tracking Manila
 String city = "Manila";
