@@ -2,6 +2,9 @@
 
 ## project by Rhaz Oriente
 
-### Documentation
+### Specs
+- the development uses platform.io on vscode not on arduino IDE.
+
+### Readings
  - https://esp32io.com/tutorials/esp32-neopixel-led-strip
 
