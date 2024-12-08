@@ -4,10 +4,11 @@
 
 ### Specs
 - the development uses platform.io on vscode not on arduino IDE.
+- https://platformio.org/
 
 ### Tools
-- ESP32
-- Neopixel LEDs
+- ESP32 - https://en.wikipedia.org/wiki/ESP32
+- Neopixel LEDs - https://www.adafruit.com/category/168
 
 ### Readings
  - https://esp32io.com/tutorials/esp32-neopixel-led-strip
@@ -21,7 +22,7 @@
 - GMT+8
 -  https://api.sunrise-sunset.org/json?lat=14.5995&lng=120.9842&tzid=Asia/Manila
 
-### Kuala Lumpor Coordinates
+### Kuala Lumpur Coordinates
 - 3.1499° N, 101.6945° E
 - GMT+7 (solar time)
 - https://api.sunrise-sunset.org/json?lat=3.1499&lng=101.6945&tzid=Asia/Kuala_Lumpur
