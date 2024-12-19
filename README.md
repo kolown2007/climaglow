@@ -27,3 +27,5 @@
 - GMT+7 (solar time)
 - https://api.sunrise-sunset.org/json?lat=3.1499&lng=101.6945&tzid=Asia/Kuala_Lumpur
 
+### LED controls
+- FastLED - https://fastled.io/
