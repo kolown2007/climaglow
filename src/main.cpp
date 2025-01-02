@@ -82,6 +82,9 @@ void setup() {
 }
 
 void loop() {
+
+  //this is for testing purposes only to see if the colors are changing
+
   KLsetSunriseColor();
   Serial.println("Sunrise color set");
   delay(10000); 
@@ -97,18 +100,12 @@ void loop() {
   KLsetSolarNoonColor();
   Serial.println("Solar Noon color set");
   delay(10000);
-  // KLsetEarlyAfternoonColor();
-  // Serial.println("Early Afternoon color set");
-  // delay(10000);
-  // KLsetMidAfternoonColor();
-  // Serial.println("Mid Afternoon color set");
-  // delay(10000);
-  // KLsetLateAfternoonColor();
-  // Serial.println("Late Afternoon color set");
-  // delay(10000);
-  // KLsetSunsetColor();
-  // Serial.println("Sunset color set");
-  // delay(10000);
+
+
+
+
+
+
 
 }
 
