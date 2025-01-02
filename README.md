@@ -35,7 +35,7 @@
 ### builtin LEDS indicators
 - red means function call success
 - blue led means fail.
-- sometimes blue just press the EN button on esp32 to refresh
+- if blue just press the EN button on esp32 to refresh
 
 ### no of LEDs.
  - this is the total no of LEDs in the strip connection.
