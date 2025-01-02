@@ -43,7 +43,8 @@
 
 ### How to Connect to WIFI
  - first time connection: connect to Climaglow hotspot, pw: kolown1234
- - connect to your wifi, it will save the credentials
+ - open browser on phone/laptop and go to 192.168.4.1
+ - connect to the available wifi, it will save the credentials
 
  ### Manila vs KL controllers
  - for KL edit line 21 on config.cpp -->  http.begin(sunsetAPI_KL);
