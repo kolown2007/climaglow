@@ -43,4 +43,6 @@
 ### The LED effects are saved on effects.cpp file
  - note: this file is under development for color testing
 
+### Grabe ang artist na to, teh matoto ka mag jira siguro next time
+
 
