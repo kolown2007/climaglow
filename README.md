@@ -13,6 +13,8 @@
 ### Readings
  - https://esp32io.com/tutorials/esp32-neopixel-led-strip
 
+ ### LED controls
+- FastLED - https://fastled.io/
 
 #### sunset API
 - https://sunrise-sunset.org/api
@@ -25,8 +27,10 @@
 - 3.1499° N, 101.6945° E
 - https://api.sunrise-sunset.org/json?lat=3.1499&lng=101.6945&tzid=Asia/Kuala_Lumpur
 
-### LED controls
-- FastLED - https://fastled.io/
+### File Structure
+- the main loop is in main.cpp
+- config setup is in setup.h and setup.cpp
+- led effects is in effects.h and effects.cpp
 
 ### no of LEDs.
  - this is the total no of LEDs in the strip connection.
