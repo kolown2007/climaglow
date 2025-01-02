@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #define LED_PIN    13  // NeoPixel data pin
 #define LED_COUNT   8  // Number of LEDs
-#define BRIGHTNESS 50  // Set brightness (0-255)
+#define BRIGHTNESS 255  // Set brightness (0-255)
 
 #define NTP_SERVER     "time3.google.com"
 #define UTC_OFFSET     28800
