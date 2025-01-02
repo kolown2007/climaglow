@@ -6,7 +6,7 @@
 #include "config.h"  
 #include "effects.h" 
 
-CRGB leds[LED_COUNT]; // Changed to FastLED
+CRGB leds[LED_COUNT]; 
 
 String sunriseTime = "";
 String sunsetTime = "";

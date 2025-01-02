@@ -32,6 +32,11 @@
 - config setup is in setup.h and setup.cpp
 - led effects is in effects.h and effects.cpp
 
+### builtin LEDS indicators
+- red means function call success
+- blue led means fail.
+- sometimes blue just press the EN button on esp32 to refresh
+
 ### no of LEDs.
  - this is the total no of LEDs in the strip connection.
  - edit config.h line no. 6, the default is 8 coz testing setup has 8 leds
