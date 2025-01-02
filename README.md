@@ -28,6 +28,19 @@
 ### LED controls
 - FastLED - https://fastled.io/
 
+### no of LEDs.
+ - this is the total no of LEDs in the strip connection.
+ - edit config.h line no. 6, the default is 8 coz testing setup has 8 leds
+
 ### How to Connect to WIFI
  - first time connection: connect to Climaglow hotspot, pw: kolown1234
  - connect to your wifi, it will save the credentials
+
+ ### Manila vs KL controllers
+ - for KL edit line 21 on config.cpp -->  http.begin(sunsetAPI_KL);
+ - for ML edit line 21 on config.cpp -->  http.begin(sunsetAPI_ML);
+
+### The LED effects are saved on effects.cpp file
+ - note: this file is under development for color testing
+
+
