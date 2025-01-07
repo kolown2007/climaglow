@@ -14,6 +14,10 @@ String solarNoonTime = "";
 String earlyMorningTime = "";
 String midMorningTime = "";
 String lateMorningTime = "";
+String earlyAfternoonTime = "";
+String midAfternoonTime = "";
+String lateAfternoonTime = "";
+String nightTime = "";
 
 
 
@@ -66,6 +70,7 @@ void setup() {
   getSunTimes(sunriseTime, sunsetTime, solarNoonTime);
   delay(500);
   computeMorningTimes(sunriseTime, solarNoonTime, earlyMorningTime, midMorningTime, lateMorningTime);
+  computeAfternoonTimes(solarNoonTime, sunsetTime, earlyAfternoonTime, midAfternoonTime, lateAfternoonTime, nightTime);
 
   Serial.println("Sunrise time: " + sunriseTime);
   Serial.println("Solar noon: " + solarNoonTime);
@@ -73,6 +78,10 @@ void setup() {
   Serial.println("Early Morning time: " + earlyMorningTime);
   Serial.println("Mid Morning time: " + midMorningTime);
   Serial.println("Late Morning time: " + lateMorningTime);
+  Serial.println("Early Afternoon time: " + earlyAfternoonTime);
+  Serial.println("Mid Afternoon time: " + midAfternoonTime);
+  Serial.println("Late Afternoon time: " + lateAfternoonTime);
+  Serial.println("Night time: " + nightTime);
 
 
   delay(500);
@@ -103,37 +112,52 @@ void loop() {
 
   // KLsetLateAfternoonColor();
   // delay(5000);
-  KLsetSunsetColor();
+  // KLsetSunsetColor();
   // delay(5000);
 
-// struct tm timeinfo;
-//   if (!getLocalTime(&timeinfo)) {
-//     Serial.println("Failed to obtain time");
-//     return;
-//   }
+struct tm timeinfo;
+  if (!getLocalTime(&timeinfo)) {
+    Serial.println("Failed to obtain time");
+    return;
+  }
 
-//   char currentTime[6];
-//   strftime(currentTime, sizeof(currentTime), "%H:%M", &timeinfo);
-//   String currentTimeStr = String(currentTime);
+  char currentTime[6];
+  strftime(currentTime, sizeof(currentTime), "%H:%M", &timeinfo);
+  String currentTimeStr = String(currentTime);
 
-//   if (currentTimeStr >= sunriseTime && currentTimeStr < earlyMorningTime) {
-//     KLsetSunriseColor();
-//     Serial.println("Sunrise color set");
-//   } else if (currentTimeStr >= earlyMorningTime && currentTimeStr < midMorningTime) {
-//     KLsetEarlyMorningColor();
-//     Serial.println("Early Morning color set");
-//   } else if (currentTimeStr >= midMorningTime && currentTimeStr < lateMorningTime) {
-//     KLsetMidMorningColor();
-//     Serial.println("Mid Morning color set");
-//   } else if (currentTimeStr >= lateMorningTime && currentTimeStr < solarNoonTime) {
-//     KLsetLateMorningColor();
-//     Serial.println("Late Morning color set");
-//   } else if (currentTimeStr >= solarNoonTime) {
-//     KLsetSolarNoonColor();
-//     Serial.println("Solar Noon color set");
-//   }
+  if (currentTimeStr >= sunriseTime && currentTimeStr < earlyMorningTime) {
+    KLsetSunriseColor();
+    Serial.println("Sunrise color set");
+  } else if (currentTimeStr >= earlyMorningTime && currentTimeStr < midMorningTime) {
+    KLsetEarlyMorningColor();
+    Serial.println("Early Morning color set");
+  } else if (currentTimeStr >= midMorningTime && currentTimeStr < lateMorningTime) {
+    KLsetMidMorningColor();
+    Serial.println("Mid Morning color set");
+  } else if (currentTimeStr >= lateMorningTime && currentTimeStr < solarNoonTime) {
+    KLsetLateMorningColor();
+    Serial.println("Late Morning color set");
+  } else if (currentTimeStr >= solarNoonTime && currentTimeStr < earlyAfternoonTime) {
+    KLsetSolarNoonColor();
+    Serial.println("Solar Noon color set");
+  } else if (currentTimeStr >= earlyAfternoonTime && currentTimeStr < midAfternoonTime) {
+    KLsetEarlyAfternoonColor();
+    Serial.println("Early Afternoon color set");
+  } else if (currentTimeStr >= midAfternoonTime && currentTimeStr < lateAfternoonTime) {
+    KLsetMidAfternoonColor();
+    Serial.println("Mid Afternoon color set");
+  } else if (currentTimeStr >= lateAfternoonTime && currentTimeStr < sunsetTime) {
+    KLsetLateAfternoonColor();
+    Serial.println("Late Afternoon color set");
+  } else if (currentTimeStr >= sunsetTime && currentTimeStr < nightTime) {
+    KLsetSunsetColor();
+    Serial.println("Sunset color set");
+  } else if (currentTimeStr >= nightTime || currentTimeStr < sunriseTime) {
+    NightLights();
+    Serial.println("Night color set");
+  }
 
-//   delay(60000); // Check every minute
+  delay(60000); // Check every minute
 
 
 }

@@ -31,5 +31,8 @@ void MLsetMidAfternoonColor();
 void MLsetLateAfternoonColor();
 void MLsetSunsetColor();
 
+//nightlights
+void NightLights();
+
 
 #endif

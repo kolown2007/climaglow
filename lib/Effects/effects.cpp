@@ -168,7 +168,36 @@ void MLsetSunsetColor() {
 }
 
 
-
+void NightLights() {
+    // Calculate 30% of total LEDs
+    const int activeCount = LED_COUNT * 0.3;
+    
+    // Array to track which LEDs are active
+    bool isActive[LED_COUNT] = {false};
+    
+    // Randomly select LEDs to activate
+    for (int i = 0; i < activeCount; i++) {
+        int ledIndex;
+        do {
+            ledIndex = random(LED_COUNT);
+        } while (isActive[ledIndex]); // Ensure we don't select the same LED twice
+        isActive[ledIndex] = true;
+    }
+    
+    // Set LED colors
+    for (int i = 0; i < LED_COUNT; i++) {
+        if (isActive[i]) {
+            uint8_t brightness = random(50, 255);
+            CRGB color = CRGB(255, 248, 102); // Yellowish color
+            leds[i] = color.nscale8(brightness);
+        } else {
+            leds[i] = CRGB::Black;
+        }
+    }
+    
+    FastLED.show();
+    delay(100);
+}
 
 
 
