@@ -85,26 +85,55 @@ void loop() {
 
   //this is for testing purposes only to see if the colors are changing
 
-  KLsetSunriseColor();
-  Serial.println("Sunrise color set");
-  delay(10000); 
-  KLsetEarlyMorningColor();
-  Serial.println("Early Morning color set");
-  delay(10000); 
-  KLsetMidMorningColor();
-  Serial.println("Mid Morning color set");
-  delay(10000); 
-  KLsetLateMorningColor();
-  Serial.println("Late Morning color set");
-  delay(10000);
-  KLsetSolarNoonColor();
-  Serial.println("Solar Noon color set");
-  delay(10000);
+  // KLsetSunriseColor();
+  // Serial.println("Sunrise color set");
+  // delay(10000); 
+  // KLsetEarlyMorningColor();
+  // Serial.println("Early Morning color set");
+  // delay(10000); 
+  // KLsetMidMorningColor();
+  // Serial.println("Mid Morning color set");
+  // delay(10000); 
+  // KLsetLateMorningColor();
+  // Serial.println("Late Morning color set");
+  // delay(10000);
+  // KLsetSolarNoonColor();
+  // Serial.println("Solar Noon color set");
+  // delay(10000);
 
+  // KLsetLateAfternoonColor();
+  // delay(5000);
+  KLsetSunsetColor();
+  // delay(5000);
 
+// struct tm timeinfo;
+//   if (!getLocalTime(&timeinfo)) {
+//     Serial.println("Failed to obtain time");
+//     return;
+//   }
 
+//   char currentTime[6];
+//   strftime(currentTime, sizeof(currentTime), "%H:%M", &timeinfo);
+//   String currentTimeStr = String(currentTime);
 
+//   if (currentTimeStr >= sunriseTime && currentTimeStr < earlyMorningTime) {
+//     KLsetSunriseColor();
+//     Serial.println("Sunrise color set");
+//   } else if (currentTimeStr >= earlyMorningTime && currentTimeStr < midMorningTime) {
+//     KLsetEarlyMorningColor();
+//     Serial.println("Early Morning color set");
+//   } else if (currentTimeStr >= midMorningTime && currentTimeStr < lateMorningTime) {
+//     KLsetMidMorningColor();
+//     Serial.println("Mid Morning color set");
+//   } else if (currentTimeStr >= lateMorningTime && currentTimeStr < solarNoonTime) {
+//     KLsetLateMorningColor();
+//     Serial.println("Late Morning color set");
+//   } else if (currentTimeStr >= solarNoonTime) {
+//     KLsetSolarNoonColor();
+//     Serial.println("Solar Noon color set");
+//   }
 
+//   delay(60000); // Check every minute
 
 
 }

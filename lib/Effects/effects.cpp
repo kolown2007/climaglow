@@ -22,32 +22,27 @@ void wifiConnected(){
 //KL lights
 
 void KLsetSunriseColor() {
-    // fill_solid(leds, LED_COUNT, CRGB(255, 248, 220)); // Soft Creamy White
-fill_rainbow(leds, LED_COUNT, 255/LED_COUNT);
+    fill_solid(leds, LED_COUNT, CRGB(255, 248, 220)); // Soft Creamy White
     FastLED.show();
 }
 
 void KLsetEarlyMorningColor() {
-   // fill_solid(leds, LED_COUNT, CRGB(245, 235, 200)); // Pale Yellow
-       fill_solid(leds, LED_COUNT, CRGB::RoyalBlue); 
+    fill_solid(leds, LED_COUNT, CRGB(245, 235, 200)); // Pale Yellow
     FastLED.show();
 }
 
 void KLsetMidMorningColor() {
-    //fill_solid(leds, LED_COUNT, CRGB(224, 255, 255)); // Cool Blue-White
-      fill_solid(leds, LED_COUNT, CRGB::Maroon); 
+    fill_solid(leds, LED_COUNT, CRGB(224, 255, 255)); // Cool Blue-White
     FastLED.show();
 }
 
 void KLsetLateMorningColor() {
-    //fill_solid(leds, LED_COUNT, CRGB(200, 230, 255)); // Subtle Sky Blue
-      fill_gradient_RGB(leds, LED_COUNT, CRGB::Green, CRGB::Blue);
+    fill_solid(leds, LED_COUNT, CRGB(200, 230, 255)); // Subtle Sky Blue
     FastLED.show();
 }
 
 void KLsetSolarNoonColor() {
-    //fill_solid(leds, LED_COUNT, CRGB(180, 230, 255)); // Vibrant Sky Blue
-     fill_gradient_RGB(leds, LED_COUNT, CRGB::Red, CRGB::Green);
+    fill_solid(leds, LED_COUNT, CRGB(180, 230, 255)); // Vibrant Sky Blue
     FastLED.show();
 }
 
@@ -62,14 +57,68 @@ void KLsetMidAfternoonColor() {
 }
 
 void KLsetLateAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 183, 153)); // Soft Peach transitioning to Gentle Pink
-    FastLED.show();
+
+   CRGB startColor = CRGB(255, 183, 153); // Soft Peach
+   CRGB endColor = CRGB(255, 102, 178); // Gentle Pink
+
+  fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
+
+ FastLED.show();
 }
 
 void KLsetSunsetColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 102, 178)); // Soft Peach transitioning to Gentle Pink
+ CRGB startColor = CRGB(255, 102, 178); // Gentle Pink
+ CRGB endColor = CRGB(153, 102, 204); // Muted Lavender
+
+   
+    fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
     FastLED.show();
 }
+
+
+// void KLsetSunsetColor() {
+//     // Define the start and end colors for the gradient
+//     CRGB startColor = CRGB(255, 102, 178); // Gentle Pink
+//     CRGB endColor = CRGB(153, 102, 204); // Muted Lavender
+
+//     // Fill the LED array with a gradient from startColor to endColor
+//     fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
+//     FastLED.show();
+
+//     // Smooth fades with occasional subtle pulses
+//     for (int i = 0; i < 256; i++) {
+//         FastLED.setBrightness(i);
+//         FastLED.show();
+//         delay(10);
+//     }
+
+//     for (int i = 255; i >= 0; i--) {
+//         FastLED.setBrightness(i);
+//         FastLED.show();
+//         delay(10);
+//     }
+
+//     // Subtle pulse effect
+//     for (int j = 0; j < 3; j++) {
+//         for (int i = 0; i < 256; i += 5) {
+//             FastLED.setBrightness(i);
+//             FastLED.show();
+//             delay(5);
+//         }
+
+//         for (int i = 255; i >= 0; i -= 5) {
+//             FastLED.setBrightness(i);
+//             FastLED.show();
+//             delay(5);
+//         }
+//     }
+// }
+
+
+
+
+
+
 
 // Manila lights
 

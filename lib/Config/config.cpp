@@ -71,7 +71,26 @@ void computeMorningTimes(String sunriseTime, String solarNoonTime, String &early
 
   earlyMorningTime = computeTime(sunriseTime, thirdInterval);
   midMorningTime = computeTime(sunriseTime, 2 * thirdInterval);
-  lateMorningTime = computeTime(sunriseTime, 3 * thirdInterval);
+  lateMorningTime = computeTime(solarNoonTime, -60);
+}
+
+void computeAfternoonTimes(String solarNoonTime, String sunsetTime, 
+    String &earlyAfternoonTime, String &midAfternoonTime, String &lateAfternoonTime) {
+    
+    int solarNoonHour = solarNoonTime.substring(0, 2).toInt();
+    int solarNoonMinute = solarNoonTime.substring(3, 5).toInt();
+    int sunsetHour = sunsetTime.substring(0, 2).toInt();
+    int sunsetMinute = sunsetTime.substring(3, 5).toInt();
+
+    int solarNoonTotalMinutes = solarNoonHour * 60 + solarNoonMinute;
+    int sunsetTotalMinutes = sunsetHour * 60 + sunsetMinute;
+
+    int interval = sunsetTotalMinutes - solarNoonTotalMinutes;
+    int thirdInterval = interval / 3;
+
+    earlyAfternoonTime = computeTime(solarNoonTime, thirdInterval);
+    midAfternoonTime = computeTime(solarNoonTime, 2 * thirdInterval);
+    lateAfternoonTime = computeTime(sunsetTime, -60); // One hour before sunset
 }
 
 void printLocalTime() {
