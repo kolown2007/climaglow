@@ -67,8 +67,9 @@ void KLsetLateAfternoonColor() {
 }
 
 void KLsetSunsetColor() {
- CRGB startColor = CRGB(255, 102, 178); // Gentle Pink
- CRGB endColor = CRGB(153, 102, 204); // Muted Lavender
+    CRGB startColor = CRGB(120, 90, 140); // Deep Purple
+    CRGB endColor = CRGB(80, 60, 100); // Nightfall Purple
+
 
    
     fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
