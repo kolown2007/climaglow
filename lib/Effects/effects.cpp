@@ -22,44 +22,44 @@ void wifiConnected(){
 //KL lights
 
 void KLsetSunriseColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 248, 220)); // Soft Creamy White
+    fill_solid(leds, LED_COUNT, CRGB(220, 170, 140));  // Warm Soft Peach
     FastLED.show();
 }
 
 void KLsetEarlyMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(245, 235, 200)); // Pale Yellow
+    fill_solid(leds, LED_COUNT, CRGB(200, 160, 210)); // Pale Purple
     FastLED.show();
 }
 
 void KLsetMidMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(224, 255, 255)); // Cool Blue-White
+    fill_solid(leds, LED_COUNT, CRGB(140, 190, 230)); // Sky Blue
     FastLED.show();
 }
 
 void KLsetLateMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(200, 230, 255)); // Subtle Sky Blue
+    fill_solid(leds, LED_COUNT, CRGB(180, 200, 230)); // Light Blue
     FastLED.show();
 }
 
 void KLsetSolarNoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(180, 230, 255)); // Vibrant Sky Blue
+    fill_solid(leds, LED_COUNT, CRGB(100, 160, 220)); // Vibrant Blue
     FastLED.show();
 }
 
 void KLsetEarlyAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 225, 204)); // Soft Peach
+    fill_solid(leds, LED_COUNT, CRGB(220, 150, 140)); // Soft Coral
     FastLED.show();
 }
 
 void KLsetMidAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 200, 170)); // Warm Coral
+    fill_solid(leds, LED_COUNT, CRGB(200, 130, 180)); // Warm Pink
     FastLED.show();
 }
 
 void KLsetLateAfternoonColor() {
 
-   CRGB startColor = CRGB(255, 183, 153); // Soft Peach
-   CRGB endColor = CRGB(255, 102, 178); // Gentle Pink
+   CRGB startColor = CRGB(160, 100, 180); // Purple
+   CRGB endColor = CRGB(120, 60, 140); // Soft Magenta
 
   fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
 
@@ -74,47 +74,6 @@ void KLsetSunsetColor() {
     fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
     FastLED.show();
 }
-
-
-// void KLsetSunsetColor() {
-//     // Define the start and end colors for the gradient
-//     CRGB startColor = CRGB(255, 102, 178); // Gentle Pink
-//     CRGB endColor = CRGB(153, 102, 204); // Muted Lavender
-
-//     // Fill the LED array with a gradient from startColor to endColor
-//     fill_gradient_RGB(leds, 0, startColor, LED_COUNT - 1, endColor);
-//     FastLED.show();
-
-//     // Smooth fades with occasional subtle pulses
-//     for (int i = 0; i < 256; i++) {
-//         FastLED.setBrightness(i);
-//         FastLED.show();
-//         delay(10);
-//     }
-
-//     for (int i = 255; i >= 0; i--) {
-//         FastLED.setBrightness(i);
-//         FastLED.show();
-//         delay(10);
-//     }
-
-//     // Subtle pulse effect
-//     for (int j = 0; j < 3; j++) {
-//         for (int i = 0; i < 256; i += 5) {
-//             FastLED.setBrightness(i);
-//             FastLED.show();
-//             delay(5);
-//         }
-
-//         for (int i = 255; i >= 0; i -= 5) {
-//             FastLED.setBrightness(i);
-//             FastLED.show();
-//             delay(5);
-//         }
-//     }
-// }
-
-
 
 
 
