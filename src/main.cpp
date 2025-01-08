@@ -92,29 +92,7 @@ void setup() {
 
 void loop() {
 
-  //this is for testing purposes only to see if the colors are changing
-
-  // KLsetSunriseColor();
-  // Serial.println("Sunrise color set");
-  // delay(10000); 
-  // KLsetEarlyMorningColor();
-  // Serial.println("Early Morning color set");
-  // delay(10000); 
-  // KLsetMidMorningColor();
-  // Serial.println("Mid Morning color set");
-  // delay(10000); 
-  // KLsetLateMorningColor();
-  // Serial.println("Late Morning color set");
-  // delay(10000);
-  // KLsetSolarNoonColor();
-  // Serial.println("Solar Noon color set");
-  // delay(10000);
-
-  // KLsetLateAfternoonColor();
-  // delay(5000);
-  // KLsetSunsetColor();
-  // delay(5000);
-
+ 
 struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
     Serial.println("Failed to obtain time");
