@@ -92,8 +92,57 @@ void setup() {
 
 void loop() {
 
- 
-struct tm timeinfo;
+  // for KLSetUp
+//  struct tm timeinfo;
+//   if (!getLocalTime(&timeinfo)) {
+//     Serial.println("Failed to obtain time");
+//     return;
+//   }
+
+//   char currentTime[6];
+//   strftime(currentTime, sizeof(currentTime), "%H:%M", &timeinfo);
+//   String currentTimeStr = String(currentTime);
+
+//   if (currentTimeStr >= sunriseTime && currentTimeStr < earlyMorningTime) {
+//     KLsetSunriseColor();
+//     Serial.println("Sunrise color set");
+//   } else if (currentTimeStr >= earlyMorningTime && currentTimeStr < midMorningTime) {
+//     KLsetEarlyMorningColor();
+//     Serial.println("Early Morning color set");
+//   } else if (currentTimeStr >= midMorningTime && currentTimeStr < lateMorningTime) {
+//     KLsetMidMorningColor();
+//     Serial.println("Mid Morning color set");
+//   } else if (currentTimeStr >= lateMorningTime && currentTimeStr < solarNoonTime) {
+//     KLsetLateMorningColor();
+//     Serial.println("Late Morning color set");
+//   } else if (currentTimeStr >= solarNoonTime && currentTimeStr < earlyAfternoonTime) {
+//     KLsetSolarNoonColor();
+//     Serial.println("Solar Noon color set");
+//   } else if (currentTimeStr >= earlyAfternoonTime && currentTimeStr < midAfternoonTime) {
+//     KLsetEarlyAfternoonColor();
+//     Serial.println("Early Afternoon color set");
+//   } else if (currentTimeStr >= midAfternoonTime && currentTimeStr < lateAfternoonTime) {
+//     KLsetMidAfternoonColor();
+//     Serial.println("Mid Afternoon color set");
+//   } else if (currentTimeStr >= lateAfternoonTime && currentTimeStr < sunsetTime) {
+//     KLsetLateAfternoonColor();
+//     Serial.println("Late Afternoon color set");
+//   } else if (currentTimeStr >= sunsetTime && currentTimeStr < nightTime) {
+//     KLsetSunsetColor();
+//     Serial.println("Sunset color set");
+//   } else if (currentTimeStr >= nightTime || currentTimeStr < sunriseTime) {
+//     NightLights();
+//     Serial.println("Night color set");
+//   }
+
+//   delay(60000); // Check every minute
+
+
+
+
+
+// for MLSetUp
+  struct tm timeinfo;
   if (!getLocalTime(&timeinfo)) {
     Serial.println("Failed to obtain time");
     return;
@@ -104,31 +153,31 @@ struct tm timeinfo;
   String currentTimeStr = String(currentTime);
 
   if (currentTimeStr >= sunriseTime && currentTimeStr < earlyMorningTime) {
-    KLsetSunriseColor();
+    MLsetSunriseColor();
     Serial.println("Sunrise color set");
   } else if (currentTimeStr >= earlyMorningTime && currentTimeStr < midMorningTime) {
-    KLsetEarlyMorningColor();
+    MLsetEarlyMorningColor();
     Serial.println("Early Morning color set");
   } else if (currentTimeStr >= midMorningTime && currentTimeStr < lateMorningTime) {
-    KLsetMidMorningColor();
+    MLsetMidMorningColor();
     Serial.println("Mid Morning color set");
   } else if (currentTimeStr >= lateMorningTime && currentTimeStr < solarNoonTime) {
-    KLsetLateMorningColor();
+    MLsetLateMorningColor();
     Serial.println("Late Morning color set");
   } else if (currentTimeStr >= solarNoonTime && currentTimeStr < earlyAfternoonTime) {
-    KLsetSolarNoonColor();
+    MLsetSolarNoonColor();
     Serial.println("Solar Noon color set");
   } else if (currentTimeStr >= earlyAfternoonTime && currentTimeStr < midAfternoonTime) {
-    KLsetEarlyAfternoonColor();
+    MLsetEarlyAfternoonColor();
     Serial.println("Early Afternoon color set");
   } else if (currentTimeStr >= midAfternoonTime && currentTimeStr < lateAfternoonTime) {
-    KLsetMidAfternoonColor();
+    MLsetMidAfternoonColor();
     Serial.println("Mid Afternoon color set");
   } else if (currentTimeStr >= lateAfternoonTime && currentTimeStr < sunsetTime) {
-    KLsetLateAfternoonColor();
+    MLsetLateAfternoonColor();
     Serial.println("Late Afternoon color set");
   } else if (currentTimeStr >= sunsetTime && currentTimeStr < nightTime) {
-    KLsetSunsetColor();
+    MLsetSunsetColor();
     Serial.println("Sunset color set");
   } else if (currentTimeStr >= nightTime || currentTimeStr < sunriseTime) {
     NightLights();
@@ -137,8 +186,10 @@ struct tm timeinfo;
 
   delay(60000); // Check every minute
 
-
 }
+
+
+
 
 
 

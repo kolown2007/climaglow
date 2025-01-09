@@ -48,7 +48,10 @@
 
  ### Manila vs KL controllers
  - for KL edit line 21 on config.cpp -->  http.begin(sunsetAPI_KL);
+ - for KL edit void loop on main.cpp --> comment the MLsetup
+
  - for ML edit line 21 on config.cpp -->  http.begin(sunsetAPI_ML);
+ -  for ML edit void loop on main.cpp --> comment the KLsetup
 
 ### The LED effects are saved on effects.cpp file
  - note: this file is under development for color testing

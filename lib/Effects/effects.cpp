@@ -83,47 +83,76 @@ void KLsetSunsetColor() {
 // Manila lights
 
 void MLsetSunriseColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 223, 186)); // Warm Yellow
+   fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(4, 240, 255),     // Warm orange
+        CHSV(42, 240, 255)     // Soft yellow
+    );
     FastLED.show();
 }
 
 void MLsetEarlyMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 245, 210)); // Soft Warm Cream
+  fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(280, 140, 255),   // Soft lavender (less saturation for pastel)
+        CHSV(25, 160, 255)     // Warm peach
+    );
     FastLED.show();
 }
 
 void MLsetMidMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 255, 204)); // Light Yellow
+    fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(50, 140, 255),    // Pale yellow (less saturation for soft look)
+        CHSV(195, 170, 255)    // Sky blue
+    );
     FastLED.show();
 }
 
 void MLsetLateMorningColor() {
-    fill_solid(leds, LED_COUNT, CRGB(240, 255, 240)); // Mint Green
-    FastLED.show();
+  fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(160, 140, 255),   // Cool mint
+        CHSV(180, 100, 255)    // Bright white-blue
+    );
 }
 
 void MLsetSolarNoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(224, 255, 255)); // Cool Blue-White
+      static uint8_t brightness;
+    EVERY_N_MILLISECONDS(50) {
+        brightness = beatsin8(10, 180, 255); // Smooth pulsing every 6 seconds
+    }
+    
+    fill_solid(leds, LED_COUNT, CHSV(185, 50, brightness)); // Cool blue-white with pulsing
     FastLED.show();
 }
 
 void MLsetEarlyAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(200, 240, 255)); // Sky Blue
+      fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(195, 140, 255),   // Bright sky blue
+        CHSV(210, 160, 255)    // Deep azure
+    );
     FastLED.show();
 }
 
 void MLsetMidAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 230, 200)); // Warm Peach
+    fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(200, 160, 255),   // Warm afternoon blue
+        CHSV(45, 180, 255)     // Soft golden
+    );
     FastLED.show();
 }
 
 void MLsetLateAfternoonColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 200, 150)); // Golden Orange
+    fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(35, 220, 255),    // Golden orange
+        CHSV(25, 240, 255)     // Deep amber
+    );
     FastLED.show();
+
 }
 
 void MLsetSunsetColor() {
-    fill_solid(leds, LED_COUNT, CRGB(255, 102, 0)); // Bright Orange transitioning to Deep Red
+    fill_gradient_HSV(leds, LED_COUNT,
+        CHSV(10, 255, 255),    // Vibrant sunset orange
+        CHSV(280, 240, 200)    // Deep purple sunset
+    );
     FastLED.show();
 }
 

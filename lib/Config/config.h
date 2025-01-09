@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #define LED_PIN    13  // NeoPixel data pin
-#define LED_COUNT   600  // Number of LEDs
+#define LED_COUNT   8 //600  // Number of LEDs
 #define BRIGHTNESS 255  // Set brightness (0-255)
 
 #define NTP_SERVER     "time3.google.com"
