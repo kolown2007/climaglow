@@ -18,7 +18,9 @@ String extractTimeFromISO8601(String iso8601) {
 void getSunTimes(String &sunriseTime, String &sunsetTime, String &solarNoonTime) {
   HTTPClient http;
   
-  http.begin(sunsetAPI_KL);
+  // http.begin(sunsetAPI_KL);   // this is for Kuala Lumpur  
+  http.begin(sunsetAPI_ML);      // this is for Manila
+
   int httpCode = http.GET();
   
   if (httpCode == HTTP_CODE_OK) {
